@@ -42,6 +42,3 @@ visible_on_load = true
 name = "Home"
 url = "@/_index.md"
 
-[[extra.main_menu]]
-name = "About"
-url = "@/about.md"
