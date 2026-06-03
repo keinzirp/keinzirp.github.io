@@ -1,0 +1,21 @@
++++
+title = "You're not going to get it done faster by rushing yourself"
+date = "2026-06-04"
+description = "Slow down"
+taxonomies.tags = [
+    "heath"
+]
++++
+---
+
+This is just a free form write down. I have not edited any of this. So it's going to be disjointed. 
+
+You're not going to get things done faster by rushing yourself. In fact it's going to be a lot slower as and stressful as you blame yourself for mistakes in a frantic race to get a task done. There's a modern disease of hurry sickness. It's a function of capitalism (which i love) but it's a real thing. It can actually make you physically sick as well as mentally. Most of the time you don't even realize that you're rushing yourself. The actual problem is that I think hurrying in this manner makes you at best 15-30% faster at the cost of everythng. This is obviously a lot so it's worth it for your employer to rush you. It has it's tradeoffs though. You've disgarded literally all enjoyment of the task at hand (yes even the worst tasks that you've taken on are somewhat fun, you just can't see that because you're hurrying). You've also disposed of all learning that you could have gained from the task because you were pressuring yourself. Sometimes hurrying can make things slower. Example: You used an LLM to get it done? Great! Did you learn anything? Did you take the time to get to know the libraries and APIs that you consumed. Was your approach even correct? Would you be able to recognise and perform a similar task again through gained expertise? Oh no it wasn't and you're only going to find that out months down the line because you should have introduced a little bit of friction into your routine. This would have made you actually think through your approach and revise it. Now you've wasted even more time and learnt nothing while having to clean up a burning mess of a codebase or whatever else you're working on. Do this enough and you become functionally useless (you learnt nothing, got outpaced through a red queens race, you suck or got burnt out or whatever). (FYI: burn out is you not managing yourself correctly and people that get themselves into this situation usually ignore glaring red flags).
+
+Stop hurrying. The pace at which a task gets done is mostly a function of how familiar you are with it. Not how much pressure you put on yourself. I'm starting to learn that you can't directly aim for speed. As much as capitalism puts productivity on a throne they don't really know what makes people more productive or even how to measure it.
+
+Just slow down. As they say; Slow is smooth, smooth is fast. I'd rather spend 12 hours in my chair having actually learnt something than 6 hours on the wrong approach, another 3 on the right approach, but rushing through and learning nothing. You can still get things shipped on time by expending more effort (as a function of time in the chair). Part of this hurring problem is companies putting so much pressure on employees to finish tasks. Part of it is people putting pressure on themselves. I think it takes some awareness on both sides of the equation to realize that you're jepordising yourself. I know that having a working product is the most important thing to you/the company. Please also consider that there are actually externalities and you want people around to be knowledge experts on the thing. Otherwise it's going to be 3am, prod is down, nobody knows how to fix anything because you vibe coded some slop that nobody has a mental model of. Your employees hate themselves because they rushed it through the door. If only they slowed down a bit and spent more time in the chair, or were given the opportunity to do so by their employer.
+
+It would be ideal if your employer gave your more time. Let's be honest though that if you're not familar with a domain and an expert would have gotten a task done in 4 hours for which you got it done in 12. You owe that time to your employer for the opportunity for completing the task. There's something about this in that awful book "The art of motorcycle maintenence". Read it and ignore the schizophrenic elements on it as most of the book is garbage.
+
+TLDR: spend more time in the chair instead of rushing through something. You can still ship in time and it's going to be way better for everyone involved.
