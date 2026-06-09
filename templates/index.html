@@ -28,5 +28,15 @@
         <a href="{{ post.permalink }}">#{{ post.name }}</a>&nbsp;
       {%- endfor %}
     </div>
+
+    <section aria-labelledby="mastodon-heading">
+      <h2 id="mastodon-heading">Mastodon</h2>
+      <p id="mastodon-status" data-mastodon-status>Loading latest posts from <a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">@keinzirp@hachyderm.io</a>…</p>
+      <ul class="mastodon-posts" data-mastodon-feed></ul>
+      <noscript>
+        <p><a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">View my latest posts on Mastodon</a>.</p>
+      </noscript>
+    </section>
+    <script src="{{ get_url(path='mastodon-feed.js') }}" defer></script>
   </main>
 {% endblock %}
