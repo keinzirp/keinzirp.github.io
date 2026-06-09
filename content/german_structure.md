@@ -8,3 +8,6 @@ taxonomies.tags = [
 draft = true
 +++
 ---
+
+Sharing about how I German study german
+- I've just reset my laptop
