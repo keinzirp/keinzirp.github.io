@@ -6,23 +6,26 @@
       <img class="about-image" src="{{ get_url(path='images/profile-cat.jpg') }}" alt="Profile image for keinzirp">
       <div class="about-copy">
         <p>I'm keinzirp, a 28 year old software engineer from New Zealand. I've spent most four years in web development at startups. I have technological optimism in times of great worry.</p>
+        <p><a href="https://github.com/keinzirp" rel="noopener noreferrer">GitHub</a> | <a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">Mastodon</a> | <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
       </div>
     </section>
     <h2>Posts</h2>
     <ul class="blog-posts">
       {%- for page in section.pages %}
-        <li>
-          <span>
-            {%- if page.date %}
-            <i>
-              <time datetime="{{ page.date | date(format='%+') }}" pubdate>
-                {{ page.date | date(format=config.extra.date_format) }}
-              </time>
-            </i>
-            {%- endif %}
-          </span>
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
-        </li>
+        {%- if not page.extra.exclude_from_posts %}
+          <li>
+            <span>
+              {%- if page.date %}
+              <i>
+                <time datetime="{{ page.date | date(format='%+') }}" pubdate>
+                  {{ page.date | date(format=config.extra.date_format) }}
+                </time>
+              </i>
+              {%- endif %}
+            </span>
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </li>
+        {%- endif %}
       {%- endfor %}
     </ul>
     <div class="tags">
