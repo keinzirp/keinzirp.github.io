@@ -32,6 +32,8 @@ site = "site"
 [extra]
 date_format = "%Y-%m-%d"
 webserver_sends_csp_headers = true
+mastodon_url = "https://hachyderm.io/@keinzirp"
+fediverse_creator = "@keinzirp@hachyderm.io"
 
 [extra.table_of_contents]
 show = true

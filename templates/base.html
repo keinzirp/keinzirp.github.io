@@ -9,6 +9,12 @@
   {% include "favicon.html" ignore missing -%}
   <title>{%- block title %}{{ config.title }}{%- endblock %}</title>
   {% include "seo_tags.html" ignore missing -%}
+  {%- if config.extra.mastodon_url %}
+  <link rel="me" href="{{ config.extra.mastodon_url | safe }}">
+  {%- endif %}
+  {%- if config.extra.fediverse_creator %}
+  <meta name="fediverse:creator" content="{{ config.extra.fediverse_creator }}">
+  {%- endif %}
   <meta name="referrer" content="strict-origin-when-cross-origin">
   {%- if config.generate_feeds %}
   {% block rss -%}
