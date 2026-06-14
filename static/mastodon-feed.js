@@ -4,7 +4,7 @@
   if (!list) return;
 
   const accountId = '116704794004638319';
-  const endpoint = `https://hachyderm.io/api/v1/accounts/${accountId}/statuses?limit=5&exclude_replies=true&exclude_reblogs=true`;
+  const endpoint = `https://hachyderm.io/api/v1/accounts/${accountId}/statuses?limit=2&exclude_replies=true&exclude_reblogs=true`;
   const cacheKey = 'mastodon-feed:v1';
   // 1 hour.
   const cacheTtl = 60 * 60 * 1000;
@@ -69,7 +69,7 @@
   function render(posts) {
     list.replaceChildren();
 
-    for (const post of posts.slice(0, 5)) {
+    for (const post of posts.slice(0, 2)) {
       const item = document.createElement('li');
       const date = document.createElement('a');
       const content = document.createElement('div');
