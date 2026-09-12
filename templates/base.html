@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ lang | default(value="en-US" ) }}">
-<head>
-  {%- if config.webserver_sends_csp_headers %}
-  {%- include "security_tags.html" ignore missing %}
-  {%- endif %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% include "favicon.html" ignore missing -%}
-  <title>{%- block title %}{{ config.title }}{%- endblock %}</title>
-  {% include "seo_tags.html" ignore missing -%}
-  {%- if config.extra.mastodon_url %}
-  <link rel="me" href="{{ config.extra.mastodon_url | safe }}">
-  {%- endif %}
-  {%- if config.extra.fediverse_creator %}
-  <meta name="fediverse:creator" content="{{ config.extra.fediverse_creator }}">
-  {%- endif %}
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  {%- if config.generate_feeds %}
-  {% block rss -%}
-  {%- for feed_filename in config.feed_filenames %}
-  <link rel="alternate" type={% if feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="{{ config.title }}" href="{{ get_url(path=feed_filename) | safe }}">
-  {%- endfor -%}
-  {%- endblock -%}
-  {%- endif %}
-  <style>
-  {% include "style.css.html" ignore missing %}
-  </style>
-  {%- include "custom_head.html" ignore missing %}
-</head>
-<body>
-  {% include "header.html" ignore missing %}
-  {%- block main -%}{%- endblock -%}
-  {%- include "custom_body.html" ignore missing -%}
-</body>
-</html>
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+<style>img { max-width: min(100%, 800px); height: auto; }</style>
+{% block content %}{% endblock content %}
+<footer><a href="{{ get_url(path="subscriptions.opml") }}">RSS subscriptions (OPML)</a></footer>

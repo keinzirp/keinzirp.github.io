@@ -1,48 +1,10 @@
 {% extends "base.html" %}
 
-{%- block main -%}
-  <main>
-    <section class="about about-with-image">
-      <img class="about-image" src="{{ get_url(path='images/profile-cat.jpg') }}" alt="Profile image for keinzirp">
-      <div class="about-copy">
-        <p>I'm keinzirp, a 28 year old software engineer from New Zealand. I've spent most four years in web development at startups. I have technological optimism in times of great worry.</p>
-        <p><a href="https://keyoxide.org/aspe:keyoxide.org:ERW3WCBV2OGCILPVHBINS5IFMU" rel="me noopener noreferrer">Keyoxide</a> | <a href="https://github.com/keinzirp" rel="noopener noreferrer">GitHub</a> | <a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">Mastodon</a> | <a href="{{ get_url(path="atom.xml") }}">RSS</a></p>
-      </div>
-    </section>
-    <h2>Posts</h2>
-    <ul class="blog-posts">
-      {%- for page in section.pages %}
-        {%- if not page.extra.exclude_from_posts %}
-          <li>
-            <span>
-              {%- if page.date %}
-              <i>
-                <time datetime="{{ page.date | date(format='%+') }}" pubdate>
-                  {{ page.date | date(format=config.extra.date_format) }}
-                </time>
-              </i>
-              {%- endif %}
-            </span>
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-          </li>
-        {%- endif %}
-      {%- endfor %}
-    </ul>
-    <div class="tags">
-      {%- set tags = get_taxonomy(kind="tags") %}
-      {%- for post in tags.items %}
-        <a href="{{ post.permalink }}">#{{ post.name }}</a>&nbsp;
-      {%- endfor %}
-    </div>
-
-    <section aria-labelledby="mastodon-heading">
-      <h2 id="mastodon-heading">Mastodon</h2>
-      <p id="mastodon-status" data-mastodon-status>Loading latest posts from <a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">@keinzirp@hachyderm.io</a>…</p>
-      <ul class="mastodon-posts" data-mastodon-feed></ul>
-      <noscript>
-        <p><a href="https://hachyderm.io/@keinzirp" rel="me noopener noreferrer">View my latest posts on Mastodon</a>.</p>
-      </noscript>
-    </section>
-    <script src="{{ get_url(path='mastodon-feed.js') }}" defer></script>
-  </main>
-{% endblock %}
+{% block content %}
+<ul>
+{% for page in section.pages %}
+  <li>{{ page.date | date(format="%Y-%m-%d") }} <a href="{{ page.permalink }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
+<footer><a href="https://github.com/keinzirp">GitHub</a> · <a href="{{ get_url(path="atom.xml") }}">RSS</a></footer>
+{% endblock content %}

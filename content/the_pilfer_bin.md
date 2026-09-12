@@ -2,9 +2,6 @@
 title = "The Pilfer Bin"
 date = "2026-04-13"
 description = "The pilfer bin"
-taxonomies.tags = [
-    "travel"
-]
 +++
 ---
 
