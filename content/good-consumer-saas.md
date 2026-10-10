@@ -1,6 +1,6 @@
 +++
 title = "Kagi search engine"
-date = ""
+date = "2026-10-11"
 draft = false
 +++
 ---
